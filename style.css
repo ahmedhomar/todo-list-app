@@ -48,17 +48,6 @@ btn:hover {
   display: none;
 }
 
-.list-group-item i.trash {
-  flex-grow: 0;
-  cursor: pointer;
-  color: #dc3545;
-  order: 3;
-}
-
-.list-group-item i.trash:hover {
-  color: #af1e2c;
-}
-
 .list-group-item .todo-text {
   flex-grow: 1;
   margin: 0 10px;
@@ -70,10 +59,6 @@ btn:hover {
   cursor: pointer;
   color: white;
   display: block;
-}
-
-.list-group-item.done i.square {
-  display: none;
 }
 
 .list-group-item.done .todo-text {
@@ -91,4 +76,10 @@ btn:hover {
   height: 3em;
   width: 5em;
   border-radius: 20%;
+  border: transparent;
+  font-family: "Jost";
+}
+
+span {
+  color: white;
 }

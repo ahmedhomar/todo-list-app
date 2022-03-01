@@ -6,21 +6,21 @@ const resetButton = document.querySelector("#resetbtn");
 
 //  Call all event listeners
 allEventListeners();
-
+// issue with scope here
 // Functions of all event listeners
 /*
 1. Add todo event
 2. Remove and complete todo event
 3. Clear or remove all todos
 */
-function allEventListeners() {
+const allEventListeners = () => {
   // Add todo event
   form.addEventListener("submit", addTodo);
   // Remove and complete todo event
   todoList.addEventListener("click", removeTodo);
   // Clear or remove all todos
   resetButton.addEventListener("click", clearTodoList);
-}
+};
 
 // Adding todo item function
 /*
@@ -35,7 +35,7 @@ function allEventListeners() {
 9. Clear input
 10. Prevent default action
 */
-function addTodo(e) {
+const addTodo = (e) => {
   if (todoInput.value != "") {
     // Create li element
     const li = document.createElement("li");
@@ -63,7 +63,7 @@ function addTodo(e) {
   }
 
   e.preventDefault();
-}
+};
 
 // Remove and complete todo item function
 /*
@@ -71,7 +71,7 @@ function addTodo(e) {
 2. If the user clicks on the trash icon, we’ll show a confirmation dialog.
 3. If the user confirms the action, we’ll remove the todo from the list.
 */
-function removeTodo(e) {
+const removeTodo = (e) => {
   // Remove todo
   if (e.target.classList.contains("trash")) {
     if (confirm("Are you sure?")) {
@@ -90,9 +90,9 @@ function removeTodo(e) {
   if (e.target.classList.contains("done-icon")) {
     e.target.parentElement.classList.toggle("done");
   }
-}
+};
 
 // Clear or remove all todos function
-function clearTodoList() {
+const clearTodoList = () => {
   todoList.innerHTML = "";
-}
+};
