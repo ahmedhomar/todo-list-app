@@ -12,16 +12,36 @@
     <div class="row">
       <div class="column">
         <div class="card">
-          <h1 class="card-header">My Todos</h1>
+          <div class="header-reset">
+            <h2 class="card-header">My Todos</h2>
+          <button id="resetbtn" type="button" class="btn">
+            Reset
+          </button>
+          </div>
+          
           <div class="card-body">
-            <button id="resetbtn" type="button" class="btn">
-              Reset
-            </button>
+           
                 <span class="input-group-text">
                   <h2> Welcome back Jake</h2>
                 </span>
               </div>
             </div>
+            <h3>Tasks</h3>
+            <form id="form">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="todo"
+                  placeholder="Add your task here"
+                />
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary">
+                    <i class="plus btn">+</i> 
+                  </button>
+                </div>
+              </div>
+            </form>
             <ul class="list-group">
               <li class="list-group-item">
                 <i class="done-icon"></i>
@@ -45,21 +65,7 @@
             
           </div>
           <div class="card-footer">
-            <form id="form">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="todo"
-                  placeholder="Add your task here"
-                />
-                <div class="input-group-append">
-                  <button type="submit" class="btn btn-primary">
-                    <i class="plus btn">+</i> 
-                  </button>
-                </div>
-              </div>
-            </form>
+            
           </div>
         </div>
       </div>
